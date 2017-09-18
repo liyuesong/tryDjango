@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <!--add verbatim: can rander out variable in the html as what it is: {{ html_var }}, can use for entire page: will show how them looks like as you wrote here-->
+    <p>This is <code>{% verbatim %} {{ html_var }} {% endverbatim %} </code> coming through</p>
+    <!--p>This is {{ html_var }} coming through</p-->
+    <!--can use conditional here-->
+    <p>
+    {% if num is not None %}
+        Random number is {{ num }}
+    {% endif %}
+    </p>
+    <!--can use for loop here-->
+    <!--can add template filter-->
+    <p>
+    	{% for some_item in some_list %}
+    		{% if some_item|divisibleby:"2" %}
+    			Even number
+    		{% endif %}
+
+    		{{ some_item }}<br/>
+    	{% endfor %}
+    </p>
+    <!--test, should be blank-->
+    <p>
+    	Some item is {{ some_item }}
+    </p>
+</body>
+
+</html>
