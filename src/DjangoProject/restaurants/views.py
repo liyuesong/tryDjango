@@ -41,4 +41,16 @@ def home(request):
 		"some_list": some_list
 	}
 	# return render(request, "base.html", {"html_var": "context variable"})
-	return render(request, "base.html", context) # replace the context variable in the html/template
+	return render(request, "home.html", context) # replace the context variable in the html/template
+
+def about(request):
+	context = {
+	}
+	# return render(request, "base.html", {"html_var": "context variable"})
+	return render(request, "about.html", context) # replace the context variable in the html/template
+
+def contact(request):
+	context = {
+	}
+	# return render(request, "base.html", {"html_var": "context variable"})
+	return render(request, "contact.html", context) # replace the context variable in the html/template
