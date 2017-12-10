@@ -1,6 +1,7 @@
 import random
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views import View
 
 # Create your views here.
 # handle URLs
@@ -54,3 +55,18 @@ def contact(request):
 	}
 	# return render(request, "base.html", {"html_var": "context variable"})
 	return render(request, "contact.html", context) # replace the context variable in the html/template
+
+class ContactView(View):
+	def get(self, request, *args, **kwargs):
+		context = {}
+		return render(request, "contact.html", context)
+
+	# def post(self, request, *args, **kwargs):
+	# 	return
+
+	# def put(self, request, *args, **kwargs):
+	# 	return
+
+
+
+
