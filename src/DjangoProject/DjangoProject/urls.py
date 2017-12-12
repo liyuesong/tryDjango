@@ -19,7 +19,8 @@ from django.views.generic import TemplateView
 
 # from restaurants.views import home, about, contact, ContactView, ContactTemplateView
 
-from restaurants.views import HomeView, AboutView, ContactTemplateView
+# from restaurants.views import HomeView, AboutView, ContactTemplateView
+from restaurants.views import HomeView
 
 # urlpatterns = [
 #     url(r'^admin/', admin.site.urls),
